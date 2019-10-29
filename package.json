@@ -1,0 +1,29 @@
+{
+  "name": "vue-easy-printer",
+  "version": "1.0.0",
+  "private":false,
+  "description": "The Best Vue Plugin To convert Html page, Components to pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Vuejs",
+    "html",
+    "pdf"
+  ],
+  "files": [
+  "dist/*"
+ ],
+"scripts": {
+  "build": "bili --name index --plugin vue --vue.css false"
+ },
+  "author": "loicgeek",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "devDependencies": {
+    "bili": "^4.8.1",
+    "rollup-plugin-vue": "^5.1.2",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
