@@ -19,7 +19,7 @@ Once you have installed the package and registered to you Vue app , two methods 
  1. **$easyPrint**
  
 
-    ```$easyPrint(elementId,title=null,orientation='portrait')```
+    ```$easyPrint(elementId,title=null,orientation='portrait',preview=false)```
     
     **elementId**: the string corresponding to the id of the DOM element you would like to print.
     **title**: the string corresponding to the title of the page you are going to create.
@@ -29,14 +29,19 @@ Once you have installed the package and registered to you Vue app , two methods 
  2. **$easyPrintComponent**
  
 
-    ```$easyPrintComponent (component, propsData={},title=null, orientation = 'portrait')```
+    ```$easyPrintComponent (component, propsData={},title=null, orientation = 'portrait',preview=false)```
      **component**: The component you want you print into pdf.
      **propsData**: props data to pass to this component.
     
+    
     In your component file you can just call : 
-    ```this.$easyPrint('myElementId','Awesome Page title','landscape')```
+    ```
+    this.$easyPrint('myElementId','Awesome Page title','landscape')
+    ```
     or 
-    ``` import MyAwesomeComponent from './MyComponent';
-    this.$easyPrintComponent(MyAwesomeComponent,{name:'loic',country:'Cameroon'}); ```
+    ``` 
+    import MyAwesomeComponent from './MyComponent';
+    this.$easyPrintComponent(MyAwesomeComponent,{name:'loic',country:'Cameroon'});
+     ```
     
 

@@ -3,7 +3,7 @@ import helpers from './helpers';
 
 const VueEasyPrinter = {
     install(Vue, option) {
-        Vue.component(PrinterModel.name, PrinterModel);
+        Vue.component(PrintModelComponent.name, PrintModelComponent);
         Vue.prototype.$easyPrint = function (elementId,title=null,orientation='portrait') {
             return helpers.gPrint(elementId,title,orientation);
         };
