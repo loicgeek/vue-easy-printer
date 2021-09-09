@@ -1,4 +1,5 @@
 import PrintModelComponent from './PrinterModelComponent.vue';
+import Vue from 'vue'
 
 export default {
     gPrint(elementId, title = null, orientation = 'portrait') {
