@@ -1,6 +1,6 @@
 <template>
     <div :class="orientation">
-        <div   v-html="content">
+        <div  class="content"  v-html="content">
         </div>
     </div>
 </template>
@@ -9,12 +9,9 @@
     export default {
         name:'PrinterModel',
         props:{
-            orientation:{type:String, enum:['portrait','landscape'],default:'lanscape'},
+            orientation:{type:String, enum:['portrait','landscape'],default:'landscape'},
             content:{type:String},
             title:{type:String}
-        },
-        mounted() {
-            console.log(this.orientation)
         }
     }
 </script>
@@ -41,8 +38,12 @@
         width: 370mm;
         height: 320mm;
     }
-
     @media print {
+        .content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         body {
             background: none;
             -ms-zoom: 1.665;
@@ -57,10 +58,5 @@
             transform: rotate(270deg) translate(-370mm, 0);
             transform-origin: 0 0;
         }
-    }
-
-    .ui.table thead th {
-        font-size: 12px;
-        padding: 0;
     }
 </style>
